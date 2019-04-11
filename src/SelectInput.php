@@ -53,11 +53,8 @@ class SelectInput extends InputWidget
      */
     public function run()
     {
-        // Input field
-        if($this->hasModel())
-            $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
-        else
-            $input = Html::textInput($this->name, $this->value, $this->options);
+        // Select field
+        $input = Html::activeDropDownList($this->model, $this->attribute, $this->items, $this->options);
 
         // Build input group
         $this->selectinputId = 'selectinput-' . $this->options['id'];
