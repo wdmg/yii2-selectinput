@@ -24,6 +24,8 @@ use yii\base\InvalidConfigException;
 class SelectInput extends InputWidget
 {
 
+    public $items = [];
+
     public $options = [
         'class' => 'form-control'
     ];
@@ -53,11 +55,11 @@ class SelectInput extends InputWidget
      */
     public function run()
     {
-        // Select field
+        // Build select
         $input = Html::activeDropDownList($this->model, $this->attribute, $this->items, $this->options);
 
-        // Build input group
-        $this->selectinputId = 'selectinput-' . $this->options['id'];
+        // Get select id
+        $this->selectinputId = $this->options['id'];
 
         // Register assets
         $this->registerAssets();
