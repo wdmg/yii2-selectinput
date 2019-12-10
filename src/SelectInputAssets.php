@@ -21,7 +21,7 @@ class SelectInputAssets extends AssetBundle
         parent::init();
         $this->css = YII_DEBUG ? ['css/selectinput.css'] : ['css/selectinput.min.css'];
         $this->js = YII_DEBUG ? ['js/selectinput.js'] : ['js/selectinput.min.js'];
-        $this->depends = [\yii\web\JqueryAsset::className()];
+        $this->depends = [\yii\web\JqueryAsset::class];
     }
 
 }

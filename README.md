@@ -55,7 +55,7 @@ Example of use with ActiveForm:
     $form = ActiveForm::begin();
     ...
     
-    echo $form->field($model, 'type')->widget(SelectInput::className(), [
+    echo $form->field($model, 'type')->widget(SelectInput::class, [
         'items' => [
             'value' => 'Label',
             ...
@@ -93,4 +93,5 @@ SelectInput extends InputWidget so you can use any options available for this wi
 
             
 # Status and version
+* v.1.0.6 - Fixed deprecated class declaration
 * v.1.0.5 - Update README.md. Update Yii2 version.
