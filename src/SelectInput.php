@@ -6,7 +6,7 @@ namespace wdmg\widgets;
  * Yii2 SelectInput
  *
  * @category        Widgets
- * @version         1.0.6
+ * @version         1.0.7
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-selectinput
  * @copyright       Copyright (c) 2019 W.D.M.Group, Ukraine
@@ -37,7 +37,9 @@ class SelectInput extends InputWidget
         'toggleClass' => '.btn .btn-default .dropdown-toggle',
         'toggleText' => 'Dropdown',
         'toggleCaret' => '<span class="caret"></span>',
-        'toggleChange' => true
+        'toggleChange' => true,
+        'autocomplete' => false,
+        'minInput' => 2
     ];
 
     private $selectinputId = null;

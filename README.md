@@ -39,7 +39,9 @@ Example of standalone widget:
             'toggleClass' => '.btn .btn-default .dropdown-toggle',
             'toggleText' => 'Dropdown',
             'toggleCaret' => '<span class="caret"></span>',
-            'toggleChange' => true
+            'toggleChange' => true,
+            'autocomplete' => false,
+            'minInput' => 2
         ]
     ])
     
@@ -70,7 +72,9 @@ Example of use with ActiveForm:
             'toggleClass' => '.btn .btn-default .dropdown-toggle',
             'toggleText' => 'Dropdown',
             'toggleCaret' => '<span class="caret"></span>',
-            'toggleChange' => true
+            'toggleChange' => true,
+            'autocomplete' => false,
+            'minInput' => 2
         ]
     ]);
     ...
@@ -87,11 +91,12 @@ SelectInput extends InputWidget so you can use any options available for this wi
 | Name                   | Type    | Default                   | Description            |
 |:---------------------- | ------- |:------------------------- |:---------------------- |
 | options                | array   | `['class' => 'form-control']` | Standard options for the input widget. |
-| pluginOptions          | array   | `['dropdownClass' => '.dropdown', 'listClass' => '.dropdown-menu', 'itemClass' => '.dropdown-item', 'toggleClass' => '.btn .btn-default .dropdown-toggle', 'toggleText' => 'Dropdown', 'toggleCaret' => '<span class="caret"></span>', 'toggleChange' => true` | Plugin SelectInput options passed to js. Read more here (https://github.com/wdmg/bootstrap-selectinput). |
+| pluginOptions          | array   | `['dropdownClass' => '.dropdown', 'listClass' => '.dropdown-menu', 'itemClass' => '.dropdown-item', 'toggleClass' => '.btn .btn-default .dropdown-toggle', 'toggleText' => 'Dropdown', 'toggleCaret' => '<span class="caret"></span>', 'toggleChange' => true`, 'autocomplete' => false, 'minInput' => 2 | Plugin SelectInput options passed to js. Read more here (https://github.com/wdmg/bootstrap-selectinput). |
 | items                  | array   | `['value' => 'Label']` | Array values with labels. |
 
 
             
 # Status and version
+* v.1.0.7 - Update pluginOptions and plugin version
 * v.1.0.6 - Fixed deprecated class declaration
 * v.1.0.5 - Update README.md. Update Yii2 version.
