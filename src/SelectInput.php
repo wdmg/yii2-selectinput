@@ -6,7 +6,7 @@ namespace wdmg\widgets;
  * Yii2 SelectInput
  *
  * @category        Widgets
- * @version         1.0.7
+ * @version         1.0.8
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-selectinput
  * @copyright       Copyright (c) 2019 - 2020 W.D.M.Group, Ukraine
@@ -57,11 +57,16 @@ class SelectInput extends InputWidget
      */
     public function run()
     {
+        // Get input id
+        if (isset($this->options['id']))
+            $this->selectinputId = $this->options['id'];
+        else
+            $this->selectinputId = $this->getId();
+
+        $this->options['id'] = $this->selectinputId;
+
         // Build select
         $input = Html::activeDropDownList($this->model, $this->attribute, $this->items, $this->options);
-
-        // Get select id
-        $this->selectinputId = $this->options['id'];
 
         // Register assets
         $this->registerAssets();
@@ -83,6 +88,9 @@ class SelectInput extends InputWidget
         // Parse plugin options and insert inline
         $pluginOptions = !empty($this->pluginOptions) ? Json::encode($this->pluginOptions) : '';
         $js[] = "; jQuery('#" . $this->selectinputId . "').selectinput($pluginOptions);";
+        $js[] = "; jQuery(document).on('pjax:success', function() {
+            jQuery('#" . $this->selectinputId . "').selectinput($pluginOptions);
+        });";
 
         // Register selectinput component initial script
         $view->registerJs(implode("\n", $js));

@@ -1,4 +1,8 @@
-[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.13-blue.svg)](https://packagist.org/packages/yiisoft/yii2) [![Github all releases](https://img.shields.io/github/downloads/wdmg/yii2-selectinput/total.svg)](https://GitHub.com/wdmg/yii2-selectinput/releases/) [![GitHub version](https://badge.fury.io/gh/wdmg/yii2-selectinput.svg)](https://github.com/wdmg/yii2-selectinput) ![Progress](https://img.shields.io/badge/progress-in_development-red.svg) [![GitHub license](https://img.shields.io/github/license/wdmg/yii2-selectinput.svg)](https://github.com/wdmg/yii2-selectinput/blob/master/LICENSE)
+[![Progress](https://img.shields.io/badge/required-Yii2_v2.0.13-blue.svg)](https://packagist.org/packages/yiisoft/yii2)
+[![Github all releases](https://img.shields.io/github/downloads/wdmg/yii2-selectinput/total.svg)](https://GitHub.com/wdmg/yii2-selectinput/releases/)
+[![GitHub version](https://badge.fury.io/gh/wdmg/yii2-selectinput.svg)](https://github.com/wdmg/yii2-selectinput)
+![Progress](https://img.shields.io/badge/progress-ready_to_use-green.svg)
+[![GitHub license](https://img.shields.io/github/license/wdmg/yii2-selectinput.svg)](https://github.com/wdmg/yii2-selectinput/blob/master/LICENSE)
 
 # Yii2 SelectInput
 SelectInput widget for Yii2
@@ -97,6 +101,7 @@ SelectInput extends InputWidget so you can use any options available for this wi
 
             
 # Status and version
+* v.1.0.8 - Fixed widget ID and init after Pjax reloading
 * v.1.0.7 - Update pluginOptions and plugin version
 * v.1.0.6 - Fixed deprecated class declaration
 * v.1.0.5 - Update README.md. Update Yii2 version.
