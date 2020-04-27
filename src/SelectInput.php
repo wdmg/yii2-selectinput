@@ -6,7 +6,7 @@ namespace wdmg\widgets;
  * Yii2 SelectInput
  *
  * @category        Widgets
- * @version         1.0.8
+ * @version         1.0.9
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-selectinput
  * @copyright       Copyright (c) 2019 - 2020 W.D.M.Group, Ukraine
